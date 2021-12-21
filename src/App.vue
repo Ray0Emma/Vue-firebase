@@ -1,26 +1,27 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="header">
+        <span id="logo">Joy Food</span>
+  </div>
+
+  <div id="app" class="container">
+      <div class="content">
+          <h1 class="title">Top Ventes</h1>
+          <FoodSelector></FoodSelector>
+      </div>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import FoodSelector from './components/FoodSelector.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    FoodSelector
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+@import "./assets/styles/app.css";
 </style>

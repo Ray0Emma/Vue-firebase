@@ -1,55 +1,5 @@
-body {
-    height: 100vh;
-    -webkit-font-smoothing: auto;
-    -moz-osx-font-smoothing: auto;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+@import url(//fonts.googleapis.com/earlyaccess/notonaskharabic.css);
+
+body{
     font-family: 'Noto Naskh Arabic', serif;
-    background-color: #ccdcdc;
-    background-repeat: no-repeat;
-    background-position: 100% 100%
-}
-
-span#logo {
-    font-weight: 700;
-    color: #eee;
-    font-size: larger;
-    letter-spacing: .05em;
-    padding-left: .5rem;
-    padding-right: .5rem;
-    float: left;
-    padding-top: 6px;
-    margin-right: 20px;
-}
-
-.header{
-    background-color:slategray;
-    width: 80% ;
-    height: 50px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-h1.title {
-    text-align: center;
-    font-size: 1.875rem;
-    font-weight: 500;
-    color: #2d3336
-}
-
-h2.subtitle {
-    margin: 8px auto;
-    font-size: x-large;
-    text-align: center;
-    line-height: 1.5;
-    max-width: 500px;
-    color: #5c6162
-}
-
-.content {
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-    width: 620px
 }

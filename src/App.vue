@@ -1,21 +1,24 @@
 <template>
   <div id="app">
     <Filters></Filters>
-    <br>
+    <br/>
     <img alt="Vue logo" src="./assets/logo.png">
     <imperial-converter/>
-
+    <br/>
+    <BMI/>
   </div>
 </template>
 
 <script>
 import Filters from './components/Filters.vue'
 import ImperialConverter from './components/ImperialConverter.vue'
+import BMI from './components/BMI.vue'
 export default {
   name: 'App',
   components: {
       Filters,
-      ImperialConverter
+      ImperialConverter,
+      BMI
   }
   
 }

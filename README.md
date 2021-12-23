@@ -1,4 +1,4 @@
-# joy-food-cli
+
 
 ## Project setup
 ```

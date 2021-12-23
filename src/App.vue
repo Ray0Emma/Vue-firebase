@@ -1,28 +1,16 @@
 <template>
   <div id="app">
-    <h1>Filters are deprecated</h1>
-    <!-- {{text | toUpper}} -->
-    <!-- Local  -->
-    {{ toUpper }}
-    <br>
-    <!-- Global filter -->
-    {{ $filters.toLower(text) }}
+    <Filters></Filters>
   </div>
 </template>
 
 <script>
+import Filters from './components/Filters.vue'
 export default {
   name: 'App',
-  data() {
-      return {
-        text: 'we gonna apply a filter on this text'  
-    }
-  },
-  computed: {
-    toUpper() {
-       return this.text.toUpperCase();
-    }
-  },
+  components: {
+      Filters
+  }
   
 }
 </script>

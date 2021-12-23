@@ -1,15 +1,21 @@
 <template>
   <div id="app">
     <Filters></Filters>
+    <br>
+    <img alt="Vue logo" src="./assets/logo.png">
+    <imperial-converter/>
+
   </div>
 </template>
 
 <script>
 import Filters from './components/Filters.vue'
+import ImperialConverter from './components/ImperialConverter.vue'
 export default {
   name: 'App',
   components: {
-      Filters
+      Filters,
+      ImperialConverter
   }
   
 }

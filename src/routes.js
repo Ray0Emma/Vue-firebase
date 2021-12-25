@@ -1,4 +1,4 @@
-import { createRouter } from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router'
 import Home from "./pages/Home";
 import AddUser from "./pages/AddUser";
 import EditUser from "./pages/EditUser";
@@ -28,6 +28,7 @@ const routes = [
   ]
 
   const router = createRouter({
+    history: createWebHistory(process.env.BASE_URL),
     routes
   })
   export default router

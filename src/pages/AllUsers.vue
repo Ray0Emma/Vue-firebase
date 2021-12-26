@@ -9,7 +9,7 @@
       <div class="col-2">{{usr.username}}</div>
       <div class="col-4">{{usr.firstname}} {{usr.lastname}}</div>
       <div class="col-1">
-        <router-link :to="{name: 'EditUser', params: {user:usr}}">Edit</router-link>
+        <router-link :to="{name: 'EditUser', params: {user:usr.id,username:usr.username,firstname:usr.firstname,lastname: usr.lastname}}">Edit</router-link>
       </div>
     </div>
   </div>

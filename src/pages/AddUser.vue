@@ -45,10 +45,10 @@ export default {
             this.user.firstname = "";
             this.user.lastname = "";
 
-            alert("A new user is added.");
+            this.$swal("A new user is added.", "Operation Succeeded", "success");
           })
-      .catch((errors) => {
-            alert(errors);
+      .catch(() => {
+            this.$swal("Oops...", "Something went wrong!", "error");
       });
     },
   },

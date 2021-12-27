@@ -1,19 +1,35 @@
 <template>
   <div id="app">
-    <nav id="nav">
-      <p class="logo-place">Vue.js Remote Server (Enhanced)</p>
-      <ul class="nav-links">
-        <li class="links">
-          <router-link to="/">Home</router-link>
-        </li>
-        <li class="links">
-          <router-link to="/AddUser">Add User</router-link>
-        </li>
-        <li class="links">
-          <router-link to="/AllUsers">All User</router-link>
-        </li>
-      </ul>
+    <!-- Start Navbar -->
+    <nav class="navbar navbar-expand-md navbar-light navbar-top py-3 shadow-sm">
+      <div class="container-lg ">
+        <router-link class="navbar-brand fs-5 fw-bold " to="/"> 
+          <img src="./assets/logo.png" alt="Purple Letter F inside polygon" width="43" height="43"
+            class="brand-text">
+          <span class="fs-6">Welcome There!</span>
+        </router-link>
+        <button class="d-lg-none d-md-none bg-white " style="border-color: rgba(102, 172, 204, 0);"
+          data-bs-toggle="collapse" data-bs-target="#toggelMobileMenu" aria-controls="toggelMobileMenu"
+          aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse " id="toggelMobileMenu" >
+          <hr>
+          <ul class="navbar-nav ms-auto ">
+            <li class="nav-item me-3">
+              <router-link to="/">Home</router-link>
+            </li>
+            <li class="nav-item me-3">
+              <router-link to="/AddUser">Add User</router-link>
+            </li>
+            <li class="nav-item me-3">
+              <router-link to="/AllUsers">All User</router-link>
+            </li>
+          </ul>
+        </div>
+      </div>
     </nav>
+    <!-- End Navbar -->
     <router-view></router-view>
   </div>
 </template>
@@ -26,37 +42,20 @@ export default {
 </script>
 
 <style>
-#nav {
-  display: flex;
-  margin-bottom: 24px;
+nav.navbar {
+  margin-bottom: 34px;
 }
-
-#nav a {
+nav.navbar a span {
+  font-weight: bold;
+  color: #2c3e50;
+}
+li.nav-item a {
   font-weight: bold;
   color: #2c3e50;
   text-decoration: none;
   margin-right:12px;
 }
-
-#nav a.router-link-active {
-  color: #ab26ab;
-}
-
-.nav-links {
-  padding-right: 20px;
-  list-style: none;
-  display: flex;
-  margin:21px 0 0 0;
-}
-
-.links-hover {
-  text-decoration: underline;
-}
-
-.logo-place {
-  font-size: 20px;
-  color: purple;
-  font-weight: bold;
-  margin:16px 0 0 16px;
+li.nav-item a.router-link-active {
+  color: #59b984;
 }
 </style>

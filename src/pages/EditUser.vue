@@ -63,7 +63,7 @@ export default {
           this.$swal("The user is updated.", "Operation Succeeded", "success");
         })
         .then(() => {
-          this.$router.push("AllUsers");
+          this.$router.push({ name: "AllUsers" });
         })
         .catch(() => {
           this.$swal("Oops...", "Something went wrong!", "error");

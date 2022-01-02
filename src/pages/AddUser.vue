@@ -2,6 +2,12 @@
   <div class="container-lg">
     <div class="row justify-content-center mt-5">
       <div class="col-6 text-center mt-4">
+        <div class="alert alert-danger" role="alert" v-if="errors.length > 0">
+          <li v-for="error in errors" :key="error">
+            {{ error }}
+            <br />
+          </li>
+        </div>
         <h1>Add User</h1>
       </div>
     </div>
@@ -36,7 +42,7 @@
               </div>
             </div>
           </div>
-          <button class="btn btn-dark px-4 mt-3" @click="postUser()">
+          <button class="btn btn-dark px-4 mt-3" @click="formValidator()">
             Add
           </button>
         </div>
@@ -49,7 +55,31 @@
 import axios from "axios";
 export default {
   name: "AddUser",
+  data() {
+    return {
+      user: {
+        username: "",
+        firstname: "",
+        lastname: "",
+      },
+      errors: [],
+    };
+  },
   methods: {
+    formValidator() {
+      if (!this.user.username) {
+        this.errors.push("User name required");
+      }
+      if (!this.user.firstname) {
+        this.errors.push("First name required");
+      }
+      if (!this.user.lastname) {
+        this.errors.push("Last name required");
+      }
+      if (this.user.username && this.user.firstname && this.user.lastname) {
+        return this.postUser();
+      }
+    },
     postUser() {
       return axios
         .post(
@@ -67,15 +97,6 @@ export default {
           this.$swal("Oops...", "Something went wrong!", "error");
         });
     },
-  },
-  data() {
-    return {
-      user: {
-        username: "",
-        firstname: "",
-        lastname: "",
-      },
-    };
   },
 };
 </script>

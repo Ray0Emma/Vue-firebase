@@ -1,4 +1,5 @@
-
+## Vue CRUD App
+Just learning the basics of vue-router in vue3 with Firebase RealTime database
 
 ## Project setup
 ```
